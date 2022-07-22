@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+    alias(libs.plugins.versions)
+    alias(libs.plugins.version.catalog.update)
+}
+
+group 'com.kousenit'
+version '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation(libs.jackson)  // Jackson JSON parser
+    testImplementation(libs.bundles.junit)
+    testImplementation(libs.assertj)
+}
+
+test {
+    useJUnitPlatform()
+}

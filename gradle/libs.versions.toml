@@ -1,0 +1,20 @@
+[versions]
+assertj = "3.23.1"
+jackson = "2.13.3"
+junit = "5.9.0-RC1"
+
+[libraries]
+assertj = { module = "org.assertj:assertj-core", version.ref = "assertj" }
+jackson = { module = "com.fasterxml.jackson.core:jackson-databind", version.ref = "jackson" }
+junit-jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit" }
+junit-vintage = { module = "org.junit.vintage:junit-vintage-engine", version.ref = "junit" }
+
+[bundles]
+junit = [
+    "junit-jupiter",
+    "junit-vintage",
+]
+
+[plugins]
+version-catalog-update = "nl.littlerobots.version-catalog-update:0.5.1"
+versions = "com.github.ben-manes.versions:0.42.0"
