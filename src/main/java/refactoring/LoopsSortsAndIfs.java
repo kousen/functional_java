@@ -9,11 +9,11 @@ public class LoopsSortsAndIfs {
         List<String> evenLengths = new ArrayList<>();
         for (String s : strings) {
             if (s.length() % 2 == 0) {
-                evenLengths.add(s.toUpperCase(Locale.ROOT));
+                evenLengths.add(s.toUpperCase());
             }
         }
 
-        Collections.sort(evenLengths, new Comparator<>() {
+        evenLengths.sort(new Comparator<>() {
             @Override
             public int compare(String s1, String s2) {
                 return s1.length() - s2.length();
